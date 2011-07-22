@@ -1,6 +1,6 @@
-<table width="700" height="150" border="0">
+<table width="700" border="0">
   <tr>
-    <td width="345"><img src="<%=Spree::Config[:html_invoice_logo_path]%>"  alt="logo" /></td>
+    <td width="345"><img src="<%=Spree::Config[:html_invoice_logo_path]%>"  width="240" height="100" alt="logo" /></td>
     <td width="345"><div align="right" class="orange">
       <p><%= I18n.t("#{params[:template]}.header") %></p>
       <p class="bold"><%= I18n.t(:order_number).to_s + " " + @order.number  %></p>

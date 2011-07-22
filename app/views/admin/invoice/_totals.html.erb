@@ -1,0 +1,15 @@
+<%   # Inside line_items table with 5 columns
+totals = [ [ I18n.t(:subtotal) , number_to_currency(@order.item_total)]]
+@order.adjustments.each do |charge|
+  totals << [ charge.label , number_to_currency(charge.amount) ]
+end
+totals << [ I18n.t(:order_total) , number_to_currency(@order.total) ]
+@counter -= totals.length
+totals.each do |label , value|
+%>
+<tr>
+  <td>&nbsp;</td> <td>&nbsp;</td> 
+  <td colspan="2" class="bold"> <%= label %>: </td>
+  <td class="cell" align="right"><%= value %> </td>
+</tr>
+<%end%>

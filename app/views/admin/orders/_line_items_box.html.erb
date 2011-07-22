@@ -1,0 +1,30 @@
+<table width="700" height="400" border="0">
+  <tr>
+    <td class="bold"><%= I18n.t(:sku) %></td>
+    <td class="bold"><%= I18n.t(:item_description) %></td>
+    <td class="bold"><%=I18n.t(:price)  unless @hide_prices%></td>
+    <td class="bold"><%=I18n.t(:qty)%></td>
+    <td class="bold"><%=I18n.t(:total) unless @hide_prices%></td>
+  </tr>
+  <% @counter = 25 
+    @order.line_items.each do |item|
+    @counter -= 1    %>
+  <tr>
+    <td class="cell"><%=item.variant.product.sku%></td>
+    <td class="cell"><%=item.variant.product.name%></td>
+    <td class="cell"><%=number_to_currency(item.price) unless @hide_prices%></td>
+    <td class="cell"><%=item.quantity%></td>
+    <td class="cell"><%=number_to_currency(item.price * item.quantity) unless @hide_prices%></td>
+  </tr>
+  
+  <% 3.times do %>  <tr> <td> &nbsp; </td></tr> <% counter -= 1 ; end %>
+  <%= render :partial => "bye" %>
+  <% while @counter > 6 do %>  <tr> <td> &nbsp; </td></tr> <% counter -= 1 ; end %>
+  <%=   render :partial => "totals" unless @hide_prices %>  
+  <% while @counter > 6 do %>  <tr> <td> &nbsp; </td></tr> <% counter -= 1 ; end %>
+</table>
+  
+
+  
+
+

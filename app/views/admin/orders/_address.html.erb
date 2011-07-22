@@ -1,0 +1,33 @@
+<%
+bill_address = @order.bill_address
+ship_address = @order.ship_address
+anonymous = @order.email =~ /@example.net$/
+if anonymous and Spree::Config[:suppress_anonymous_address]
+  addresses = [[" "," "]] * 5 
+else
+  addresses << [  bill_address.firstname.to_s + " " + bill_address.lastname.to_s, 
+              ship_address.firstname.to_s + " " + ship_address.lastname.to_s]
+  addresses << [  bill_address.address1 , ship_address.address1 ]
+  addresses << [  bill_address.address2 unless bill_address.address2 =~ /\d{3,6}-\d/ , 
+              ship_address.address2 unless ship_address.address2 =~ /\d{3,6}-\d/ ]
+  addresses << [  bill_address.zipcode.to_s + " " + bill_address.city.to_s , 
+              ship_address.zipcode.to_s + " " + ship_address.city.to_s ]
+  addresses << [ bill_address.country.name , ship_address.country.name ]
+  addresses << [ bill_address.phone , ship_address.phone ]
+
+end
+
+%>
+<table width="700" height="200" border="0">
+  <tr>
+    <td width="10%"> &nbsp </td>
+    <td width="45%" class="bold"><%=I18n.t(:billing_address)%></td>
+    <td width="45%" class="bold"><%=I18n.t(:shipping_address)%></td>
+  </tr>
+  <% addresses.each do |row| %>
+    <tr>    <td width="10%"> &nbsp </td>
+      <td><%=row[0]%> </td>
+      <td><%=row[1]%> </td>
+    </tr>
+  <%end%>
+</table>

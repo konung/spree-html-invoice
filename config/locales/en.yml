@@ -1,0 +1,23 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+
+en:
+  footer_left: "Return in<br/>Other info"
+  footer_left2: " 14 days <br/> or never"
+
+  footer_right: "Company  <br/>Phone  <br/> www "
+  footer_right2: " My great company <br/>040 146 1222 <br/>  www.gohereoften.com"
+  invoice:
+    header: Customer Invoice
+    thanks: Thank you for your order
+    print: Print Invoice
+  packaging_slip:
+    header: Packaging Slip
+    print: Print Slip
+    thanks: Please check the contens immediately.
+  reminder:
+    header: Payment Reminder
+    print: Reminder
+    thanks: Our system has not registered any payment for this Invoice. We kindly request you 
+            correct this situation.
+    
+  

@@ -16,12 +16,29 @@
 
 <body>
   <div class="a4">
-    <% ["header","address","line_items","bye","totals","footer"].each do |part| %>
-    <div class="<%=part%>">
-      <%= render :partial => part %>
+    <div class="header">
+      <%= render :partial => "header" %>
     </div>
-    <%end%>
-</div>
+    <div class="address">
+      <%= render :partial => "address" %>
+    </div>
+    <div class="wrapper">
+      <div class="line_items">
+        <%= render :partial => "line_items" %>
+      </div>
+      <div class="bye">
+        <%= render :partial => "bye" %>
+      </div>
+      <div class="spacer"> &nbsp;
+      </div>
+      <div class="totals">
+        <%= render :partial => "totals" %>
+      </div>
+    </div>
+    <div class="footer">
+      <%= render :partial => "footer" %>
+    </div>
+  </div>
 </body>
 </html>
 

@@ -1,13 +1,14 @@
-<tr>
-  <td class="cell" cellspan="2"><%=I18n.t("#{params[:template]}.thanks" , :order => @order)%> </td>
-  <td class="cell">&nbsp;</td>
-</tr>
-<tr>
-  <td class="cell" cellspan="2"> </td>
-  <td class="cell">&nbsp;</td>
-</tr>
-<% @counter -= 3 %>
-<%= 
-  hook :extra_note do 
-  end
-%>
+<table class="bye">
+  <tr>
+    <td class="cell" cellspan="2"><%=I18n.t("#{params[:template]}.thanks" , :order => @order)%> </td>
+    <td class="cell">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="cell" cellspan="2"> </td>
+    <td class="cell">&nbsp;</td>
+  </tr>
+  <%= 
+    hook :extra_note do 
+    end
+  %>
+</table>

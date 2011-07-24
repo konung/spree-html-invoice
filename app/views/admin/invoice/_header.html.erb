@@ -2,7 +2,7 @@
   <tr>
     <td width="345"><img src="<%=Spree::Config[:html_invoice_logo_path]%>"  width="240" height="100" alt="logo" /></td>
     <td width="345"><div align="right">
-      <p  class="title"><%= I18n.t("#{params[:template]}.header") %></p>
+      <p class="title"><%= I18n.t("#{params[:template]}.header") %></p>
       <p class="bold"><%= I18n.t(:order_number).to_s + " " + @order.number  %></p>
       <p class="bold"> <%= I18n.l @order.completed_at.to_date %></p>
     </div></td>

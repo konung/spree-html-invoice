@@ -1,10 +1,10 @@
 <table class="line_items" >
   <tr>
-    <td class="bold"><%= I18n.t(:sku) %></td>
-    <td class="bold"><%= I18n.t(:item_description) %></td>
-    <td class="bold"><%=I18n.t(:price)  unless @hide_prices%></td>
-    <td class="bold"><%=I18n.t(:qty)%></td>
-    <td class="bold" align="right"><%=I18n.t(:total) unless @hide_prices%></td>
+    <td class="col1 bold"><%= I18n.t(:sku) %></td>
+    <td class="col2 bold"><%= I18n.t(:item_description) %></td>
+    <td class="col3 bold"><%=I18n.t(:price)  unless @hide_prices%></td>
+    <td class="col4 bold"><%=I18n.t(:qty)%></td>
+    <td class="col5 bold" align="right"><%=I18n.t(:total) unless @hide_prices%></td>
   </tr>
   <% @order.line_items.each do |item| %>
   <tr>

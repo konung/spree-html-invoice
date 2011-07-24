@@ -10,9 +10,8 @@ totals = [] if  @hide_prices
 <table class="totals">
   <%  totals.each do |label , value| %>
     <tr>
-      <td width="200">&nbsp;</td> <td>&nbsp;</td> 
-      <td colspan="2" class="bold"> <%= label %>: </td>
-      <td class="cell" align="right"><%= value %> </td>
+      <td class="cel1 bold"> <%= label %>: </td>
+      <td class="cel2 cell" align="right"><%= value %> </td>
     </tr>
   <%end%>
 </table>

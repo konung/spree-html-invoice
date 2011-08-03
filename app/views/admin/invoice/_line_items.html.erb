@@ -2,17 +2,17 @@
   <tr>
     <td class="col1 bold"><%= I18n.t(:sku) %></td>
     <td class="col2 bold"><%= I18n.t(:item_description) %></td>
-    <td class="col3 bold"><%=I18n.t(:price)  unless @hide_prices%></td>
+    <td class="col3 bold"><%=I18n.t(:price)  unless @packaging_slip%></td>
     <td class="col4 bold"><%=I18n.t(:qty)%></td>
-    <td class="col5 bold" align="right"><%=I18n.t(:total) unless @hide_prices%></td>
+    <td class="col5 bold" align="right"><%=I18n.t(:total) unless @packaging_slip%></td>
   </tr>
   <% @order.line_items.each do |item| %>
   <tr>
     <td class="cell"><%=item.variant.product.sku%></td>
     <td class="cell"><%=item.variant.product.name%></td>
-    <td class="cell"><%=number_to_currency(item.price) unless @hide_prices%></td>
+    <td class="cell"><%=number_to_currency(item.price) unless @packaging_slip%></td>
     <td class="cell"><%=item.quantity%></td>
-    <td class="cell" align="right"><%=number_to_currency(item.price * item.quantity) unless @hide_prices%></td>
+    <td class="cell" align="right"><%=number_to_currency(item.price * item.quantity) unless @packaging_slip%></td>
   </tr>
   <% end %>
 </table>

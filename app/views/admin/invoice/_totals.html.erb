@@ -4,7 +4,7 @@ totals = [ [ I18n.t(:subtotal) , number_to_currency(@order.item_total)]]
   totals << [ charge.label , number_to_currency(charge.amount) ]
 end
 totals << [ I18n.t(:order_total) , number_to_currency(@order.total) ]
-totals = [] if  @hide_prices
+totals = [] if  @packaging_slip
 %>
 
 <table class="totals">

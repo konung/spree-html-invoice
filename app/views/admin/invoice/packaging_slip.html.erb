@@ -1,3 +1,3 @@
-<%  @hide_prices = params[:template] == "packaging_slip"  %>
+<%  @packaging_slip = (params[:template] == "packaging_slip")  %>
 
 <%= render :partial => "a4" %>

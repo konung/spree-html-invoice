@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet"  href="/stylesheets/admin/html-receipt.css">
+<title><%= I18n.t("#{params[:template]}.header") %></title>
+</head>
+
+<body onLoad="self.print()"> 
+  <div class="receipt">
+    <div class="header">
+      <%= render :partial => "r_header" %>
+    </div>
+    <div class="wrapper">
+      <div class="line_items">
+        <%= render :partial => "line_items" %>
+      </div>
+      <div class="spacer"> &nbsp;
+      </div>
+      <div class="totals">
+        <%= render :partial => "totals" %>
+      </div>
+    </div>
+    <div class="footer">
+      <%= render :partial => "r_footer" %>
+    </div>
+  </div>
+</body>
+</html>
+

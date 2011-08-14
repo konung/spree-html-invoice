@@ -19,5 +19,8 @@ en:
     print: Reminder
     thanks: Our system has not registered any payment for this Invoice. We kindly request you 
             correct this situation.
+    receipt:
+      header: Receipt
+      print: Receipt
     
   

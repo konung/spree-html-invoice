@@ -18,5 +18,7 @@ fi:
     thanks: "Kirjanpitomme mukaan emme ole saaneet suoritustanne tästä
             laskusta.\n Pyydämme maksamaan laskun heti. \n\n
             Mikäli lasku on jo maksettu, tämä maksuhuomautus on aiheeton."
-  
+  receipt:
+    header: Kuitti
+    print: Kuitti
   

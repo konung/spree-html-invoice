@@ -10,6 +10,8 @@ If you need server-side pdf generation, use the spree-print-invoice extension.
 INSTALLATION
 ============
 
+For spree 0.7, ie using deface and rails 3.1. There is a brach 06 for an older version
+
 1. To install you need to add the following lines to your Gemfile (no external dependendies)
 
     gem 'spree_html_invoice' , :git => 'git://github.com/dancinglightning/spree-html-invoice.git'

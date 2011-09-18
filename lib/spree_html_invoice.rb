@@ -11,13 +11,13 @@ module HtmlInvoice
       Deface::Override.new(:virtual_path => "admin/orders/show",
                            :name => "converted_admin_order_show_buttons_186918949",
                            :insert_after => "[data-hook='admin_order_show_buttons'], #admin_order_show_buttons[data-hook]",
-                           :partial => "html_buttons",
+                           :partial => "admin/orders/html_buttons",
                            :disabled => false)
 
       Deface::Override.new(:virtual_path => "admin/orders/edit",
                            :name => "converted_admin_order_edit_buttons_180260121",
                            :insert_after => "[data-hook='admin_order_edit_buttons'], #admin_order_edit_buttons[data-hook]",
-                           :partial => "html_buttons",
+                           :partial => "admin/orders/html_buttons",
                            :disabled => false)
     end
 
